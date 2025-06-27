@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: saanvikitmaypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: saanvikitmaypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: saanvikitmaypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: saanvikitmaypipelinesjavascriptdocker 
+          image: saanvikitcontainerregistry.azurecr.io/saanvikitmaypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
